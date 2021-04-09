@@ -3,20 +3,20 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2021-03-31T20:56:15.865Z",
-        "line": 3,
+        "start_timestamp": "2021-04-09T05:57:28.885Z",
+        "line": 11,
         "name": "Test the valid login",
         "description": "",
-        "id": "test-the-login-functionality-of-orangehrm;test-the-valid-login",
+        "id": "test-the-login-functionality-of-orangehrm;test-the-valid-login;;2",
         "type": "scenario",
-        "keyword": "Scenario",
+        "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 15571000000,
+              "duration": 5176000000,
               "status": "passed"
             },
-            "line": 5,
+            "line": 4,
             "name": "user is on loginPage",
             "match": {
               "location": "com.stepDefinition.LoginSteps.user_is_on_login_page()"
@@ -25,22 +25,32 @@
           },
           {
             "result": {
-              "duration": 783000000,
+              "duration": 398000000,
               "status": "passed"
             },
-            "line": 6,
-            "name": "user enters username and password",
+            "line": 5,
+            "name": "user enters admin and admin123",
             "match": {
-              "location": "com.stepDefinition.LoginSteps.user_enters_username_and_password()"
+              "arguments": [
+                {
+                  "val": "admin",
+                  "offset": 12
+                },
+                {
+                  "val": "admin123",
+                  "offset": 22
+                }
+              ],
+              "location": "com.stepDefinition.LoginSteps.user_enters_username_and_password(java.lang.String,java.lang.String)"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 2021000000,
+              "duration": 2761000000,
               "status": "passed"
             },
-            "line": 7,
+            "line": 6,
             "name": "click on login button",
             "match": {
               "location": "com.stepDefinition.LoginSteps.click_on_login_button()"
@@ -49,10 +59,79 @@
           },
           {
             "result": {
-              "duration": 355000000,
+              "duration": 275000000,
               "status": "passed"
             },
-            "line": 8,
+            "line": 7,
+            "name": "user should land on home page",
+            "match": {
+              "location": "com.stepDefinition.LoginSteps.user_should_land_on_home_page()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-04-09T05:57:37.615Z",
+        "line": 12,
+        "name": "Test the valid login",
+        "description": "",
+        "id": "test-the-login-functionality-of-orangehrm;test-the-valid-login;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 3620000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "user is on loginPage",
+            "match": {
+              "location": "com.stepDefinition.LoginSteps.user_is_on_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 383000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user enters admin1 and admin1234",
+            "match": {
+              "arguments": [
+                {
+                  "val": "admin1",
+                  "offset": 12
+                },
+                {
+                  "val": "admin1234",
+                  "offset": 23
+                }
+              ],
+              "location": "com.stepDefinition.LoginSteps.user_enters_username_and_password(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 544000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "click on login button",
+            "match": {
+              "location": "com.stepDefinition.LoginSteps.click_on_login_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 286000000,
+              "status": "passed"
+            },
+            "line": 7,
             "name": "user should land on home page",
             "match": {
               "location": "com.stepDefinition.LoginSteps.user_should_land_on_home_page()"
