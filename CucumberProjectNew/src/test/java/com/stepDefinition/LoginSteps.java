@@ -1,9 +1,12 @@
 package com.stepDefinition;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -23,6 +26,14 @@ public class LoginSteps {
 		driver.get("https://opensource-demo.orangehrmlive.com/index.php/auth/validateCredentials");
 	}
 
+	@When("user enters credentials using DataTable")
+	public void user_enters_credentials_using_DataTable(DataTable dataTable) {
+		System.out.println("Step 2: User enters username and pswd");
+		List<List<String>> data=dataTable.cells(); //call cell method to get the data from the dataTable
+		driver.findElement(By.id("txtUsername")).sendKeys(data.get(0).get(0)); //get method is called to get the data
+		driver.findElement(By.id("txtPassword")).sendKeys(data.get(0).get(1));
+		
+	}
 	@When("^user enters (.*) and (.*)$")
 	public void user_enters_username_and_password(String uname, String pwd) {
 		System.out.println("Step 2: User enters username and password");
