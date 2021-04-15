@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="7.796">
-<testcase classname="Test the login functionality of OrangeHRM using DataTable" name="Test the valid login" time="7.111">
-<system-out><![CDATA[Given user is on loginPage..................................................passed
-When user enters credentials using DataTable................................passed
-And click on login button...................................................passed
-Then user should land on home page..........................................passed
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="0.765">
+<testcase classname="Using of tagd on Cucumber" name="Scenario 2" time="0.106">
+<system-out><![CDATA[Given This is Scenario2.....................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Using of tagd on Cucumber" name="Scenario 3" time="0.013">
+<system-out><![CDATA[Given This is Scenario3.....................................................passed
 ]]></system-out>
 </testcase>
 </testsuite>

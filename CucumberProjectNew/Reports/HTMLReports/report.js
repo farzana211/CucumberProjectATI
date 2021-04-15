@@ -1,54 +1,59 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/FeatureFiles/DataTable.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/FeatureFiles/TagDemo.feature");
 formatter.feature({
-  "name": "Test the login functionality of OrangeHRM using DataTable",
+  "name": "Using of tagd on Cucumber",
   "description": "",
-  "keyword": "Feature"
+  "keyword": "Feature",
+  "tags": [
+    {
+      "name": "@FunctionalTest"
+    }
+  ]
 });
 formatter.scenario({
-  "name": "Test the valid login",
+  "name": "Scenario 2",
   "description": "",
-  "keyword": "Scenario"
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@FunctionalTest"
+    },
+    {
+      "name": "@SanityTest"
+    },
+    {
+      "name": "@RegressionTest"
+    }
+  ]
 });
 formatter.step({
-  "name": "user is on loginPage",
+  "name": "This is Scenario2",
   "keyword": "Given "
 });
 formatter.match({
-  "location": "com.stepDefinition.LoginSteps.user_is_on_login_page()"
+  "location": "com.stepDefinition.TagDemo.this_is_Scenario2()"
 });
 formatter.result({
   "status": "passed"
 });
-formatter.step({
-  "name": "user enters credentials using DataTable",
-  "rows": [
-    {},
-    {}
-  ],
-  "keyword": "When "
-});
-formatter.match({
-  "location": "com.stepDefinition.LoginSteps.user_enters_credentials_using_DataTable(io.cucumber.datatable.DataTable)"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "click on login button",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "com.stepDefinition.LoginSteps.click_on_login_button()"
-});
-formatter.result({
-  "status": "passed"
+formatter.scenario({
+  "name": "Scenario 3",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@FunctionalTest"
+    },
+    {
+      "name": "@RegressionTest"
+    }
+  ]
 });
 formatter.step({
-  "name": "user should land on home page",
-  "keyword": "Then "
+  "name": "This is Scenario3",
+  "keyword": "Given "
 });
 formatter.match({
-  "location": "com.stepDefinition.LoginSteps.user_should_land_on_home_page()"
+  "location": "com.stepDefinition.TagDemo.this_is_Scenario3()"
 });
 formatter.result({
   "status": "passed"

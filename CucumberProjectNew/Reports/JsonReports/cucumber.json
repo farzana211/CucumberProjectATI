@@ -1,86 +1,87 @@
 [
   {
-    "line": 1,
+    "line": 2,
     "elements": [
       {
-        "start_timestamp": "2021-04-11T02:44:35.587Z",
-        "line": 3,
-        "name": "Test the valid login",
+        "start_timestamp": "2021-04-15T07:47:03.198Z",
+        "line": 12,
+        "name": "Scenario 2",
         "description": "",
-        "id": "test-the-login-functionality-of-orangehrm-using-datatable;test-the-valid-login",
+        "id": "using-of-tagd-on-cucumber;scenario-2",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 5728000000,
+              "duration": 3000000,
               "status": "passed"
             },
-            "line": 4,
-            "name": "user is on loginPage",
+            "line": 13,
+            "name": "This is Scenario2",
             "match": {
-              "location": "com.stepDefinition.LoginSteps.user_is_on_login_page()"
+              "location": "com.stepDefinition.TagDemo.this_is_Scenario2()"
             },
             "keyword": "Given "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@FunctionalTest"
           },
           {
-            "result": {
-              "duration": 609000000,
-              "status": "passed"
-            },
-            "line": 5,
-            "name": "user enters credentials using DataTable",
-            "match": {
-              "location": "com.stepDefinition.LoginSteps.user_enters_credentials_using_DataTable(io.cucumber.datatable.DataTable)"
-            },
-            "rows": [
-              {
-                "cells": [
-                  "admin",
-                  "admin123"
-                ]
-              },
-              {
-                "cells": [
-                  "admin1",
-                  "admin12345"
-                ]
-              }
-            ],
-            "keyword": "When "
+            "name": "@SanityTest"
           },
           {
-            "result": {
-              "duration": 438000000,
-              "status": "passed"
-            },
-            "line": 8,
-            "name": "click on login button",
-            "match": {
-              "location": "com.stepDefinition.LoginSteps.click_on_login_button()"
-            },
-            "keyword": "And "
-          },
+            "name": "@RegressionTest"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-04-15T07:47:03.315Z",
+        "line": 16,
+        "name": "Scenario 3",
+        "description": "",
+        "id": "using-of-tagd-on-cucumber;scenario-3",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
           {
             "result": {
-              "duration": 234000000,
+              "duration": 8000000,
               "status": "passed"
             },
-            "line": 9,
-            "name": "user should land on home page",
+            "line": 17,
+            "name": "This is Scenario3",
             "match": {
-              "location": "com.stepDefinition.LoginSteps.user_should_land_on_home_page()"
+              "location": "com.stepDefinition.TagDemo.this_is_Scenario3()"
             },
-            "keyword": "Then "
+            "keyword": "Given "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@FunctionalTest"
+          },
+          {
+            "name": "@RegressionTest"
           }
         ]
       }
     ],
-    "name": "Test the login functionality of OrangeHRM using DataTable",
+    "name": "Using of tagd on Cucumber",
     "description": "",
-    "id": "test-the-login-functionality-of-orangehrm-using-datatable",
+    "id": "using-of-tagd-on-cucumber",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/FeatureFiles/DataTable.feature",
-    "tags": []
+    "uri": "file:src/test/resources/FeatureFiles/TagDemo.feature",
+    "tags": [
+      {
+        "name": "@FunctionalTest",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
   }
 ]
